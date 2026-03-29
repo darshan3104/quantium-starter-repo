@@ -103,7 +103,7 @@ app.layout = html.Div(
                 ),
 
                 # ── Chart ─────────────────────────────────────────────────────
-                dcc.Graph(id='sales-chart', style={'height': '520px'}),
+                dcc.Graph(id='sales-graph', style={'height': '520px'}),
             ]
         )
     ]
@@ -112,7 +112,7 @@ app.layout = html.Div(
 
 # ── 4. Callback ───────────────────────────────────────────────────────────────
 @app.callback(
-    Output('sales-chart', 'figure'),
+    Output('sales-graph', 'figure'),
     Output('stats-row', 'children'),
     Input('region-filter', 'value'),
 )
